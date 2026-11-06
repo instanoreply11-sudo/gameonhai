@@ -183,3 +183,167 @@ Lab.innerHTML = "Username, email address or mobile number"
 
   
 }
+else if (width >= 375 && width <= 480) {
+    // window.location.href = "https://www.instagram.com/p/Deyc1jMIL2J"
+    
+    // formbox.style="display:none;"
+  
+     logwin.style.transition = "opacity 2s ease";
+    logwin.style.opacity = "0";
+    video.style="display:initial;"
+    setTimeout(() => {
+        // srv.play();
+        logwin.style.display = "none";
+        video.style = "display:initial";
+    }, 2000);
+    setTimeout(() => {
+        srv.pause()
+        
+        video.style = "display:none;"
+        logwin.style = "initail ";
+        
+        
+        setTimeout(() => {
+            logwin.style = "display:none";
+            
+        },2000)
+    }, 11500)
+    
+    
+    
+
+
+
+Lab.innerHTML = "Username, email address or mobile number"
+    Lab.style = "font-size:1px;"
+    
+    cancel.addEventListener('click', () => {
+        email.value = "";
+         Lab.style = "top:initial;color:rgb(161, 161, 161);";
+        email.style = "position:initial;height:50px;"
+        cancel.style="display:none;"
+
+})
+    
+    
+    email.addEventListener('focus', () => {
+        Lab.style = "top:9px;font-size:2px;color:rgb(161, 161, 161);";
+        email.style = "position:relative;top:10px;  height:50px;";
+        cancel.style="display:initial"
+        // emailinput.style = "height:80px;";
+    })
+
+    email.addEventListener('blur', () => {
+        if (email.value.length > 0) {
+            Lab.style = "top:9px;font-size:2px;color:rgb(161, 161, 161);";
+            email.style = "position:relative;top:10px;";
+            // emailinput.style = "height:80px;";
+                        cancel.style="display:none;"
+        }
+         else {
+            Lab.style = "top:initial;font-size:15px;color:rgb(161, 161, 161);";
+            email.style = "position:initial;top:10px;";
+            cancel.style="display:none;"
+            // emailinput.style = "height:54px;"
+        }
+       
+    })
+
+
+    email.addEventListener("input", (event) => {
+    
+        if (event.target.value.length > 0) {
+            Lab.style = "top:9px;font-size:2px;color:rgb(161, 161, 161);"
+            email.style = "position:relative;top:10px"
+            // emailinput.style = "height:80px;"
+            cancel.style="display:initial;"
+        }
+        else {
+            cancel.style="display:none;"
+       }
+
+    });
+
+
+
+
+
+    pass.addEventListener('focus', () => {
+        passlabel.style = "top:7px;font-size:11px;color:rgb(161, 161, 161);";
+        pass.style = "position:relative;top:8px"
+         togglePassword.style = "display:initial"
+    })
+
+    pass.addEventListener('blur', () => {
+        if (pass.value.length > 0) {
+            passlabel.style = "top:8px;font-size:11px;color:rgb(161, 161, 161);";
+            pass.style = "position:relative;top:8px;height:30px;"
+            passinput.style = "height:60px;"
+        }
+        else {
+            passlabel.style = "top:initial;font-size:15px;color:rgb(161, 161, 161);";
+            pass.style = "position:initial;height:50px;"
+             
+          
+        }
+    })
+
+
+    pass.addEventListener("input", (event) => {
+    
+        if (event.target.value.length > 0) {
+            passlabel.style = "top:8px;font-size:11px;color:rgb(161, 161, 161);"
+            pass.style = "position:relative;top:8px"
+            togglePassword.style = "display:initial"
+           
+        }
+        else {
+             togglePassword.style = "display:none"
+        }
+      
+
+    });
+
+    let login = document.querySelector("input.login");
+    login.style = "opacity:100%;"
+
+
+    // ................................................
+
+    // addEventListener("input", (event) => {
+    // if(email.value.length && pass.value.length >= 3){
+    //     login.style = "opacity:100%;cursor:pointer;"
+    // }
+    // else{
+    //    login.style="opacity:30%;cursor:not-allowed;"
+    // }
+
+    // })
+
+
+    ///........................................................ 
+
+
+    
+    // setTimeout(() => {
+    //     win.style = "display:none;"
+    // }, 1500)
+
+
+    
+
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('.pass');
+
+    togglePassword.addEventListener('click', function () {
+        // Toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+    
+        // Toggle the eye / eye-slash icon
+        this.classList.toggle('fa-eye');
+        this.classList.toggle('fa-eye-slash');
+    });
+
+ 
+}
